@@ -1,0 +1,43 @@
+use test1   ---> create a database
+shows dbs  ----> show all the databases which has atleast 1 document
+db.emp.insert({"name":"Ravi"}) ---collection emp will be created if not exists
+show collections
+db.createCollection("mycol")
+db.mycol.insert({"name":"value","name1":"value1"})  --- Insert many documents but as an array
+db.mycol.drop()
+Insert only 1 document
+db.empDetails.insertOne(
+	{
+		First_Name: "Sachin",
+		Last_Name: "Tendulkar",
+		Date_Of_Birth: "1973-09-26",
+		e_mail: "srt@gmail.com",
+		phone: "7656565666"
+	})
+  db.empDetails.insertMany(
+  	{
+  		First_Name: "Sachin",
+  		Last_Name: "Tendulkar",
+  		Date_Of_Birth: "1973-09-26",
+  		e_mail: "srt@gmail.com",
+  		phone: "7656565666"
+  	},
+    {
+      First_Name: "Smriti",
+      Last_Name: "Mandana",
+      Date_Of_Birth: "1993-09-26",
+      e_mail: "sm@gmail.com",
+      phone: "123456789"
+    },
+    {
+  		First_Name: "Rahul",
+  		Last_Name: "Tewatia",
+  		Date_Of_Birth: "1998-09-26",
+  		e_mail: "rt@gmail.com",
+  		phone: "33232334"
+  	}
+    )
+db.emp.find()  ---to show all documents
+db.emp.find().pretty()
+db.emp.findOne()
+db.emp.findOne({"title":"mongodb"})  
